@@ -83,7 +83,7 @@ try:
   client.connect(secrets.mqttServer, secrets.mqttPort, 60)
 
   # Publication des données sur le serveur MQTT
-  client.publish(mqttTopicUptime, uptime, qos=0, retain=False)
+  client.publish(mqttTopicUptime, uptime)
   client.publish(mqttTopicVersion, infoServer["version"])
   client.publish(mqttTopicMotd, infoServer["motd"])
   client.publish(mqttTopicJoueursListe, listeJoueurs)
