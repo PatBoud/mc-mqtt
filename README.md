@@ -6,7 +6,7 @@
 #### Prérequis
 
 - Serveur Minecraft JAVA avec Plugin [ServerTap](https://github.com/phybros/servertap)
-- Fichier "secrets.py" que vous devez créer,et qui contient les informations confidentielles
+- Fichier "secrets.py" que vous devez créer, et qui contient les informations confidentielles
 - Librairie [paho-mqtt](https://github.com/eclipse/paho.mqtt.python)
 
 
@@ -18,5 +18,5 @@ mqttServer = "192.168.1.104"
 mqttPort = 1883
 mqttUser = "utilisateur"
 mqttPass = "motdepasse"
-apiURL = "http://192.168.1.104:14567/v1/"
+apiURL = "http://192.168.1.104:4567/v1/"
 ```
