@@ -6,9 +6,9 @@
 #### Prérequis
 
 - Serveur Minecraft JAVA avec Plugin [ServerTap](https://github.com/phybros/servertap)
-- Fichier "secrets.py" que vous devez créer, et qui contient les informations confidentielles
+- Fichier `secrets.py` que vous devez créer, et qui contient les informations confidentielles
 - Librairie [paho-mqtt](https://github.com/eclipse/paho.mqtt.python)
-
+- Tâche planifiée (via cron, par exemple) qui appelle ce script à intervalle régulier
 
 
 #### Exemple de fichier secrets.py
