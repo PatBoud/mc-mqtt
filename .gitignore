@@ -1,0 +1,2 @@
+#Exclusion du fichier contenant les infos confidentielles
+secrets.py
