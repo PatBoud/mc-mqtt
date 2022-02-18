@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 #
 # MCMQTT
 # Script qui prend les infos du serveur Minecraft via le plugin ServerTap
