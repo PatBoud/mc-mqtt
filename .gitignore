@@ -1,2 +1,5 @@
 #Exclusion du fichier contenant les infos confidentielles
 secrets.py
+
+#Exclusion du dossier de cache
+__pycache__
