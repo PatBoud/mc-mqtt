@@ -26,7 +26,6 @@ import datetime
 # Importation des paramètres secrets
 import secrets
 
-
 # Définition des variables
 mqttTopicJoueursNb = "minecraft/joueurs/nb"
 mqttTopicJoueursListe = "minecraft/joueurs/liste"
@@ -34,7 +33,6 @@ mqttTopicVersion = "minecraft/version"
 mqttTopicMotd = "minecraft/motd"
 mqttTopicUptime = "minecraft/uptime"
 mqttTopicPlugins = "minecraft/plugins"
-
 
 print("OK!")
 
@@ -57,6 +55,11 @@ try:
   uptime = datetime.timedelta(seconds = uptimeSecondes)
   uptime = str(uptime)
   uptime = uptime.replace("day", "jour")
+  # Retrait des secondes
+  uptime = uptime[:-3]
+  uptime = uptime.replace(":", "h ")
+  uptime = uptime + "m"
+  
 
   # Traitement de la liste des joueurs pour nettoyer les caractères spéciaux
   # et pour calculer le nombre de joueurs
