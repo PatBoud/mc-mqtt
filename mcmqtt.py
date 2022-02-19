@@ -66,11 +66,15 @@ try:
   listeJoueurs = ""
   nbJoueurs = 0
   for joueur in infoPlayers:
-    listeJoueurs = listeJoueurs + joueur["displayName"] + "  "
+    listeJoueurs = listeJoueurs + joueur["displayName"] + " - "
     nbJoueurs = nbJoueurs + 1
-  
+  # Retrait des codes de couleur
   listeJoueurs = listeJoueurs.replace("§4", "")
   listeJoueurs = listeJoueurs.replace("§r", "")
+  listeJoueurs = listeJoueurs.replace("§e", "")
+
+  # Retrait des 3 caractères de trop à la fin
+  listeJoueurs = listeJoueurs[:-3]
 
   print ("OK!")
 except:
