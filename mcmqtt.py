@@ -54,12 +54,11 @@ try:
   uptimeSecondes = infoServer["health"]["uptime"]
   uptime = datetime.timedelta(seconds = uptimeSecondes)
   uptime = str(uptime)
-  uptime = uptime.replace("day", "jour")
+  uptime = uptime.replace(" day", "j")
   # Retrait des secondes
   uptime = uptime[:-3]
   uptime = uptime.replace(":", "h ")
   uptime = uptime + "m"
-  
 
   # Traitement de la liste des joueurs pour nettoyer les caractères spéciaux
   # et pour calculer le nombre de joueurs
