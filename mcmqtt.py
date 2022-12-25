@@ -22,6 +22,7 @@ print("Initialisation...")
 import paho.mqtt.client as mqtt
 import requests
 import datetime
+import time
 
 # Importation des paramètres secrets
 import secrets
@@ -90,10 +91,15 @@ try:
 
   # Publication des données sur le serveur MQTT
   client.publish(mqttTopicUptime, uptime)
+  time.sleep (0.25)
   client.publish(mqttTopicVersion, infoServer["version"])
+  time.sleep (0.25)
   client.publish(mqttTopicMotd, infoServer["motd"])
+  time.sleep (0.25)
   client.publish(mqttTopicJoueursListe, listeJoueurs)
+  time.sleep (0.25)
   client.publish(mqttTopicJoueursNb, nbJoueurs)
+  time.sleep (0.25)
 
   # Déconnexion
   client.disconnect()
