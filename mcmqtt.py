@@ -92,13 +92,13 @@ try:
   # Publication des données sur le serveur MQTT
   client.publish(mqttTopicUptime, uptime)
   time.sleep (0.25)
-  client.publish(mqttTopicVersion, infoServer["version"])
+  client.publish(mqttTopicVersion, infoServer["version"], retain=True)
   time.sleep (0.25)
-  client.publish(mqttTopicMotd, infoServer["motd"])
+  client.publish(mqttTopicMotd, infoServer["motd"], retain=True)
   time.sleep (0.25)
   client.publish(mqttTopicJoueursListe, listeJoueurs)
   time.sleep (0.25)
-  client.publish(mqttTopicJoueursNb, nbJoueurs)
+  client.publish(mqttTopicJoueursNb, nbJoueurs, retain=True)
   time.sleep (0.25)
 
   # Déconnexion
